@@ -18,6 +18,8 @@ typedef long long ll;
 typedef long double lld;
 using namespace std;
 
+const bool DEBUG = 1;
+
 #define sd(x) scanf("%d",&x)
 #define sd2(x,y) scanf("%d%d",&x,&y)
 #define sd3(x,y,z) scanf("%d%d%d",&x,&y,&z)
@@ -34,10 +36,36 @@ using namespace std;
 #define all(c) c.begin(),c.end()
 #define inf 1000000000000000001
 
-#define tr(...) cout<<__FUNCTION__<<' '<<__LINE__<<" = ";trace(#__VA_ARGS__, __VA_ARGS__)
+#define RUN_T int _t; cin>>_t; while(_t--)
+
+#define tr(...) if(DEBUG) {cout<<__FUNCTION__<<' '<<__LINE__<<" = ";trace(#__VA_ARGS__, __VA_ARGS__);}
 
 template<typename S, typename T>
 ostream& operator<<(ostream& out,pair<S,T> const& p){out<<'('<<p.fi<<", "<<p.se<<')';return out;}
+
+template<typename T>
+ostream& operator<<(ostream& out,set<T> const& v){
+for(auto i = v.begin(); i!=v.end(); i++)out<<(*i)<<' ';return out;}
+
+template<typename T, typename V>
+ostream& operator<<(ostream& out,map<T, V> const& v){
+for(auto i = v.begin(); i!=v.end(); i++)out<<"\n"<<(i->first)<<" : "<<(i->second);return out;}
+
+template<typename T, typename V>
+ostream& operator<<(ostream& out,unordered_map<T, V> const& v){
+for(auto i = v.begin(); i!=v.end(); i++)out<<"\n"<<(i->first)<<" : "<<(i->second);return out;}
+
+template<typename T>
+ostream& operator<<(ostream& out,multiset<T> const& v){
+for(auto i = v.begin(); i!=v.end(); i++)out<<(*i)<<' ';return out;}
+
+template<typename T>
+ostream& operator<<(ostream& out,unordered_set<T> const& v){
+for(auto i = v.begin(); i!=v.end(); i++)out<<(*i)<<' ';return out;}
+
+template<typename T>
+ostream& operator<<(ostream& out,unordered_multiset<T> const& v){
+for(auto i = v.begin(); i!=v.end(); i++)out<<(*i)<<' ';return out;}
 
 template<typename T>
 ostream& operator<<(ostream& out,vector<T> const& v){
@@ -55,6 +83,8 @@ const char* comma = strchr(names + 1, ',');cout.write(names, comma-names)<<" : "
 // __builtin_popcount -> count number of bits
 
 int32_t main(){ _
-
+    RUN_T{
+        
+    }
 }
 

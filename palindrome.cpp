@@ -7,7 +7,9 @@ struct RollingHash{
 	ll A, M;
 	int n;
 
-	RollingHash(vector<int> s, ll _A = 31, ll _M = 1e9 + 7){
+    RollingHash(){}
+    
+	RollingHash(string s, ll _A = 31, ll _M = 1e9 + 7){
 		n = s.size();
 		pwr.resize(n+1); hsh.resize(n+1);
 
@@ -31,7 +33,15 @@ struct RollingHash{
 struct PalindromeChecker {
 	RollingHash hash;
 	RollingHash revHash;
+    int n;
 
-	PalindromeChecker(String S)
+	PalindromeChecker(string s): hash(s), n(s.size()) {
+        reverse(s.begin(), s.end());
+        revHash = RollingHash(s);
+    }
+
+    bool isPalindrome(int i, int j) {
+        return hash.getHash(i, j) == revHash.getHash(n-j-1, n-i-1);
+    }
 
 };
