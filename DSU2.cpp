@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class DSU {
     public:
     
@@ -7,7 +10,6 @@ class DSU {
     vector<int> _setIndex;
     
     DSU(int n): n(n), setCount(n) {
-        
         for(int i = 0; i < n; i++) {
             _sets.push_back({i});
             _setIndex.push_back(i);
@@ -45,5 +47,13 @@ class DSU {
         setCount--;
         
         set2.clear();
+    }
+
+
+    vector<set<int>> getSets() {
+        vector<set<int>> results;
+        for (auto v: _sets)
+            if(v.size())results.push_back(v);
+        return results;
     }
 };

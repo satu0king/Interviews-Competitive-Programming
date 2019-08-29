@@ -1,16 +1,5 @@
 // g++ -std=c++14
 
-/*
-
-Today might be the chance to grasp the chance to let your talent bloom.
-May be tomorrow, the day after, or next year...
-May be even when you are 30. I'm not sure if physique has anything to do with it
-but if you think that it will never come, it probably never will.
-
-- Tooru Oikawa.
-
-*/
-
 
 #include<bits/stdc++.h>
 
@@ -35,6 +24,7 @@ const bool DEBUG = 1;
 #define __ freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
 #define all(c) c.begin(),c.end()
 #define inf 1000000000000000001
+#define epsilon 1e-6
 
 #define RUN_T int _t; cin>>_t; while(_t--)
 
@@ -78,13 +68,13 @@ template<typename T, typename... Args>
 void trace(const char* names, T&& arg1, Args&&... args){
 const char* comma = strchr(names + 1, ',');cout.write(names, comma-names)<<" : "<<arg1<<" | ";trace(comma+1,args...);}
 
+int gcd(int a, int b) { if(b == 0)return a; return gcd(b, a%b);}
+
 #define int ll
 
 // __builtin_popcount -> count number of bits
 
 int32_t main(){ _
-    RUN_T{
-        
-    }
+    
 }
 
