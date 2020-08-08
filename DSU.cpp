@@ -20,7 +20,7 @@ class DSU {
     int parent(int i) {
         if(_parent[i] == i)return i;
         
-        return _parent[i] = set(parent[i]);
+        return _parent[i] = parent(parent[i]);
     }
     
     void join(int i, int j) {
