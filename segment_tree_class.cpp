@@ -35,7 +35,7 @@ struct SegmentTree {
     pushDown(id);
     int treeMid = (tl + tr) / 2;
     int lValue = get(id * 2, tl, treeMid, l, min(treeMid, r));
-    int rValue = get(id * 2, tr, treeMid, max(l, treeMid + 1), r);
+    int rValue = get(id * 2, treeMid + 1, tr, max(l, treeMid + 1), r);
     return combine(lValue, rValue);
   }
 
@@ -52,7 +52,7 @@ struct SegmentTree {
     pushDown(id);
     int treeMid = (tl + tr) / 2;
     update(id * 2, tl, treeMid, l, min(treeMid, r), value);
-    update(id * 2, tr, treeMid, max(l, treeMid + 1), r, value);
+    update(id * 2, treeMid + 1, tr, max(l, treeMid + 1), r, value);
   }
 
   void update(int l, int r, int value) { update(1, 0, n, l, r, value); }

@@ -23,9 +23,10 @@ const bool DEBUG = 1;
 #define _ ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 #define __ freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
 #define all(c) c.begin(),c.end()
+#define inp(v) {for(auto it = v.begin(); it!=v.end(); it++)cin >> *it;}
 #define inf 1000000000000000001
 #define epsilon 1e-6
-
+#define int ll
 #define RUN_T int _t; cin>>_t; while(_t--)
 
 #define tr(...) if(DEBUG) {cout<<__FUNCTION__<<' '<<__LINE__<<" = ";trace(#__VA_ARGS__, __VA_ARGS__);}
@@ -70,11 +71,11 @@ const char* comma = strchr(names + 1, ',');cout.write(names, comma-names)<<" : "
 
 int gcd(int a, int b) { if(b == 0)return a; return gcd(b, a%b);}
 
-#define int ll
+
 
 // __builtin_popcount -> count number of bits
 
 int32_t main(){ _
-    
+        
 }
 
